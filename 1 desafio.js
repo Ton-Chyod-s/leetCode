@@ -1,7 +1,7 @@
-const comb = 5.05
-let distancia =  450
-let gasto_medio = 14
+const comb = 5.08;
+let distancia =  174;
+let gasto_medio = 11;
 
-calc = distancia / gasto_medio * comb;
+const valorGasto = calc = distancia / gasto_medio * comb;
 
-console.log(calc);
+console.log(valorGasto);
