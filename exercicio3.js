@@ -1,4 +1,4 @@
-const PreçoNormal = 75;
+const PreçoNormal = 100;
 const EscolhaPagamento = 4
 
 if (EscolhaPagamento === 'Débito') {
