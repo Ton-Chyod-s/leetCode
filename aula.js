@@ -1,5 +1,5 @@
 
-function Quadrado (valor) {
+function valorJuros (valor,porc) {
     return valor * valor
 }
 
