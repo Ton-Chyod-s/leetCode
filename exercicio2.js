@@ -1,8 +1,8 @@
 
-const PESO = 71;
+const PESO = 70;
 const ALTURA = 178;
 
-const IMC = PESO / (ALTURA * ALTURA)
+const IMC = PESO  / (ALTURA * ALTURA)
 
 if (IMC < 18.5) {
     console.log('Abaixo do peso')
