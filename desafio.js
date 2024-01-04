@@ -1,4 +1,4 @@
-let distancia =  100;
+let distancia = 100;
 let gasto_medio = 10;
 const CombustivelGasolina = 5.08;
 const CombustivelAlcool = 3.08;
