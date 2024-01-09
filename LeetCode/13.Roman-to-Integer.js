@@ -18,7 +18,7 @@ var romanToInt = function(s) {
     .toString()
     .split('')
 
-    let valor = 0
+    let valor = 0;
     for (let i in chaves) {
         key = chaves[i];
         for (let i in list_s) {
