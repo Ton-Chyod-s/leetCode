@@ -18,12 +18,20 @@ var romanToInt = function(s) {
     .toString()
     .split('')
 
+    let valor = 0
     for (let i in chaves) {
-        console.log(i);
+        key = chaves[i];
         for (let i in list_s) {
-        console.log(list_s[i])
+        value_problem = list_s[i]
+        if (key === value_problem) {
+            valor += i
+            break
+        } else {
+            break
+        }
         }
     }
+    console.log(valor)
 };
 
 romanToInt("III")
