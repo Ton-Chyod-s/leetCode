@@ -17,21 +17,23 @@ var romanToInt = function(s) {
     list_s = s
     .toString()
     .split('')
+    .reverse()
 
     let valor = 0;
     for (let i in chaves) {
         key = chaves[i];
         for (let i in list_s) {
-        value_problem = list_s[i]
-        if (key === value_problem) {
-            valor += i
-            break
-        } else {
-            break
+        const value_problem = num_ro[list_s[i]]
+        const value_problem_anterior = num_ro[list_s[i-1]]
+        if (value_problem > value_problem_anterior) {
+            const res = value_problem - value_problem_anterior
+            valor += res
+        } else if (key === list_s[i]) {
+            valor += num_ro[key]
         }
         }
     }
     console.log(valor)
 };
 
-romanToInt("III")
+romanToInt("MCMXCIV")
