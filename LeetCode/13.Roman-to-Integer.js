@@ -11,29 +11,28 @@ var romanToInt = function(s) {
     num_ro.C = 100;
     num_ro.D = 500;
     num_ro.M = 1000;
-
-    let chaves = Object.keys(num_ro);
-    
+ 
     list_s = s
     .toString()
     .split('')
     .reverse()
 
     let valor = 0;
-    for (let i in chaves) {
-        key = chaves[i];
-        for (let i in list_s) {
-        const value_problem = num_ro[list_s[i]]
-        const value_problem_anterior = num_ro[list_s[i-1]]
-        if (value_problem > value_problem_anterior) {
-            const res = value_problem - value_problem_anterior
-            valor += res
-        } else if (key === list_s[i]) {
-            valor += num_ro[key]
-        }
-        }
+    
+    for (let i in list_s) {
+    const value_problem = num_ro[list_s[i]]
+    const value_problem_posterior = num_ro[list_s[parseInt(i)+1]]
+    const value_problem_anterior = num_ro[list_s[parseInt(i)-1]]
+    if (value_problem > value_problem_posterior) {
+        const res = value_problem - value_problem_posterior
+        valor += res
+    } else if (value_problem < value_problem_anterior) {
+        continue
+    } else {
+        valor += num_ro[list_s[i]]
     }
-    console.log(valor)
+    }
+    return valor
 };
 
-romanToInt("MCMXCIV")
+console.log(romanToInt("MCMXCIV"))
