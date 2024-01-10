@@ -9,11 +9,14 @@ class Carros {
         this.cor = cor;
         this.kmL = kmL;
     }
+
+    gastosReais (km,preco) {
+        return km * this.kmL * preco;
+    }
 }
 
-function gastoReais (km, combutivel) {
-    percorrido = km / Carros.kmL
-    return percorrido * combutivel
-}
+const uno = new Carros('Fiat', 'Preto', 1/11)
+console.log(uno.gastosReais(70,5.08))
 
-console.log(gastoReais(200,15))
+const palio = new Carros('Fiat', 'Preto', 1/10)
+console.log(palio.gastosReais(70,5.08))
