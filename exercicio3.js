@@ -20,4 +20,4 @@ function aplicarDesconto (modalidade) {
     }
 }
 
-console.log('R$ ' + aplicarDesconto());
+console.log('R$ ' + aplicarDesconto(2));
