@@ -1,7 +1,9 @@
-
-function valorJuros (valor,porc) {
-    return valor * valor
+function idade (idade) {
+    if (idade >= 18) {
+        console.log('Maior de idade!')
+    } else {
+        console.log('Menor de idade!')
+    }
 }
 
-console.log(Quadrado(10) + Quadrado(10))
-
+idade(21)
