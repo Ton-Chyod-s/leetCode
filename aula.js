@@ -1,4 +1,4 @@
-function idade (idade) {
+function idade(idade) {
     if (idade >= 18) {
         console.log('Maior de idade!')
     } else {
