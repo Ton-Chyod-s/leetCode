@@ -19,25 +19,24 @@ var addTwoNumbers = function(l1, l2) {
 
     if (ehNumeroL1 && ehNumeroL2) {
         for (let i = 0; i < l1.length; i++) {
-            listaL1.unshift(l1[i])
+            listaL1.unshift(l1[i]);
         }
 
         for (let i = 0; i < l2.length; i++) {
-            listaL2.unshift(l2[i])
+            listaL2.unshift(l2[i]);
         }
 
-        const valorL1 = parseInt(listaL1.toString().replace(/,/g,''))
-        const valorL2 = parseInt(listaL2.toString().replace(/,/g,''))
-        const total = (valorL1 + valorL2).toString().split('').reverse()
+        const valorL1 = parseInt(listaL1.toString().replace(/,/g,''));
+        const valorL2 = parseInt(listaL2.toString().replace(/,/g,''));
+        const total = (valorL1 + valorL2).toString().split('').reverse();
         const totalInt = total.map(str => {
-            return parseInt(str,10)
+            return parseInt(str,10);
         })
 
         return totalInt
     }  else {
-        return [];
+        return
 }
-    
 };
 
 console.log(addTwoNumbers([2,4,3],[5,6,4]))
