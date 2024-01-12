@@ -4,19 +4,12 @@
  */
 let caracterRepetido = []
 
-var lengthOfLongestSubstring = function(s) {
-    const valorUnico = [...new Set(s)]
-
-    for (let i = 0; i < unique.length; i++) {
-        console.log(valorUnico[i])
+var lengthOfLongestSubstring = function (s) {
+    for (let i = 0; i < s.length; i++) {
+        console.log(s[i])
         
     }
-    
-      
-        
-    } 
-    
-   
 
+}
 
-console.log(lengthOfLongestSubstring("pwwkew"))
+console.log(lengthOfLongestSubstring("abcabcbb"))
