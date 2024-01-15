@@ -34,6 +34,8 @@ const recordCollection = {
                         records[id][prop] = value
                     } else if (prop === 'tracks' && value !== '') {
                         records[id][prop] = value
+                    } else {
+                        records[id][prop] = value
                     }
                 }
             } else {
@@ -47,17 +49,17 @@ const recordCollection = {
         return records;
     }
 
-  //console.log(updateRecords(recordCollection, 5439, "artist", "ABBA"));
-  //console.log(recordCollection[5439]['artist'])
-  //console.log(updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me"))
-  //console.log(recordCollection[5439]['tracks'])
-  //console.log(updateRecords(recordCollection, 2548, "artist", ""))
-  //console.log(recordCollection[2548]['artist'])
-  //console.log(updateRecords(recordCollection, 1245, "tracks", "Addicted to Love"))
-  //console.log(recordCollection[1245]['tracks'])
-  //console.log(updateRecords(recordCollection, 2468, "tracks", "Free"))
-  //console.log(recordCollection[5439]['tracks'])
-  console.log(updateRecords(recordCollection, 2548, "tracks", ""))
+  updateRecords(recordCollection, 5439, "artist", "ABBA");
+  console.log(recordCollection[5439]['artist'])
+  updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me")
   console.log(recordCollection[5439]['tracks'])
-  console.log(updateRecords(recordCollection, 1245, "albumTitle", "Riptide"))
-  console.log(recordCollection[1245]['albumTitle '])
+  updateRecords(recordCollection, 2548, "artist", "")
+  console.log(recordCollection[2548]['artist'])
+  updateRecords(recordCollection, 1245, "tracks", "Addicted to Love")
+  console.log(recordCollection[1245]['tracks'])
+  updateRecords(recordCollection, 2468, "tracks", "Free")
+  console.log(recordCollection[5439]['tracks'])
+  updateRecords(recordCollection, 2548, "tracks", "")
+  console.log(recordCollection[2548]['tracks'])
+  updateRecords(recordCollection, 1245, "albumTitle", "Riptide")
+  console.log(recordCollection[1245]['albumTitle'])
