@@ -22,7 +22,6 @@ const recordCollection = {
     // Altere apenas o código abaixo desta linha
     function updateRecords(records, id, prop, value) {
         tamanho = Object.keys(records[id]).length
-        tamanhoTracks = records[id][prop]
         if (tamanho === 1) {
             records[id][prop] = value
         } else {
