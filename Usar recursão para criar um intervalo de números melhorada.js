@@ -1,5 +1,5 @@
 function rangeOfNumbers(startNum, endNum) {
-    if () {
+    if (endNum < 0) {
       return [];
     } else {
       return rangeOfNumbers(startNum, endNum)
