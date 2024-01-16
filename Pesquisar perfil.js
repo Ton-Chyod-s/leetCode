@@ -30,32 +30,20 @@ const contacts = [
     // Altere apenas o código abaixo desta linha
     for (let i = 0; i < contacts.length; i++) {
         if (contacts[i].firstName === name) {
-            for (let j = 0; contacts[i]; j++) { 
-                if (name === contacts[i].firstName && contacts[i].hasOwnProperty(prop)) {
-                    switch (prop) {
-                        case 'firstName':
-                            return contacts[i].firstName;
-                        case 'lastName':
-                            return contacts[i].lastName;
-                        case 'number':
-                            return contacts[i].number;
-                        case 'likes':
-                            return contacts[i].likes;
-                    } break
-                } 
+            if (contacts[i].hasOwnProperty(prop)) {
+                return contacts[i][prop];
+            } else {
+                return 'No such property'
             }
-        } else if (name !== contacts[i].firstName) {
-            return 'No such contact';
-        } else {
-            return 'No such property';
         }
-}
+    }
+    return 'No such contact'
     // Altere apenas o código acima desta linha
   }
   
-  //console.log(lookUpProfile("Kristian", "lastName"));
-  //console.log(lookUpProfile("Sherlock", "likes"));
-  //console.log(lookUpProfile("Harry", "likes"));
+  console.log(lookUpProfile("Kristian", "lastName"));
+  console.log(lookUpProfile("Sherlock", "likes"));
+  console.log(lookUpProfile("Harry", "likes"));
   console.log(lookUpProfile("Bob", "number"));
   console.log(lookUpProfile("Bob", "potato"));
   console.log(lookUpProfile("Akira", "address"));
