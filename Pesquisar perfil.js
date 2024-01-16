@@ -29,10 +29,10 @@ const contacts = [
   function lookUpProfile(name, prop) {
     // Altere apenas o código abaixo desta linha
     for (let i = 0; i < contacts.length; i++) {
-        const firstName = contacts.firstName
-        const lastName = contacts.lastName
-        const number = contacts.number
-        const likes = contacts.likes
+        const firstName = contacts[i].firstName
+        const lastName = contacts[i].lastName
+        const number = contacts[i].number
+        const likes = contacts[i].likes
         
         if (name === firstName && contacts[i].hasOwnProperty(prop)) {
             console.log(firstName)
