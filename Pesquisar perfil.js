@@ -28,22 +28,29 @@ const contacts = [
   
   function lookUpProfile(name, prop) {
     // Altere apenas o código abaixo desta linha
-    for (let i = 0; i < contacts.length; i++) {
-        if (name === firstName && contacts[i].hasOwnProperty(prop)) {
-            switch (prop) {
-                case 'firstName':
-                    return firstName;
-                case 'lastName':
-                    return lastName;
-                case 'number':
-                    return number;
-                case 'likes':
-                    return likes;
-            } break
-        } else if (name !== firstName) {
-            return 'No such contact';
-        } else {
-            return 'No such property';
+    for (let j = 0; j < contacts.length; j++) {
+        for (let i = 0; i < contacts[j].length; i++) {
+            const nome = contacts[i].firstName
+            const ultimoNome = contacts[i].lastName
+            const numero = contacts[i].number
+            const gostar = contacts[i].likes
+                
+            if (name === contacts[i].firstName && contacts[i].hasOwnProperty(prop)) {
+                switch (prop) {
+                    case 'firstName':
+                        return contacts[i].firstName;
+                    case 'lastName':
+                        return contacts[i].lastName;
+                    case 'number':
+                        return contacts[i].number;
+                    case 'likes':
+                        return contacts[i].likes;
+                } break
+            } else if (name !== contacts[i].firstName) {
+                return 'No such contact';
+            } else {
+                return 'No such property';
+            }
         }
     }
     // Altere apenas o código acima desta linha
