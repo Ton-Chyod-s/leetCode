@@ -35,10 +35,19 @@ const contacts = [
         const likes = contacts[i].likes
         
         if (name === firstName && contacts[i].hasOwnProperty(prop)) {
-            console.log(firstName)
+            switch (prop) {
+                case 'number':
+                    console.log(number);
+                case 'likes':
+                    console.log(likes)
+            } break
+        } else if (name !== firstName) {
+            console.log('No such contact');
+            break;
+        } else {
+            console.log('No such property');
+            break
         }
-
-
     }
     // Altere apenas o código acima desta linha
   }
