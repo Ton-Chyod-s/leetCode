@@ -29,11 +29,6 @@ const contacts = [
   function lookUpProfile(name, prop) {
     // Altere apenas o código abaixo desta linha
     for (let i = 0; i < contacts.length; i++) {
-        const firstName = contacts[i].firstName
-        const lastName = contacts[i].lastName
-        const number = contacts[i].number
-        const likes = contacts[i].likes
-        
         if (name === firstName && contacts[i].hasOwnProperty(prop)) {
             switch (prop) {
                 case 'firstName':
@@ -54,4 +49,10 @@ const contacts = [
     // Altere apenas o código acima desta linha
   }
   
-  lookUpProfile("Akira", "likes");
+  console.log(lookUpProfile("Kristian", "lastName"));
+  console.log(lookUpProfile("Sherlock", "likes"));
+  console.log(lookUpProfile("Harry", "likes"));
+  console.log(lookUpProfile("Bob", "number"));
+  console.log(lookUpProfile("Bob", "potato"));
+  console.log(lookUpProfile("Akira", "address"));
+
