@@ -1,13 +1,13 @@
-let count = 0;
 function rangeOfNumbers(startNum, endNum) {
-    if (endNum - count === 0) {
+    if (endNum <= 0) {
       return [];
     } else if (startNum === endNum) {
       return [endNum];
     } else {
-      count += 1;
-      return rangeOfNumbers(startNum, endNum);
+      const countArray = rangeOfNumbers(startNum, endNum - 1)
+      countArray.push(endNum);
+      return countArray;
     }
   };
 
-  console.log(rangeOfNumbers(1, 1)) //[1, 2, 3, 4, 5]
+  console.log(rangeOfNumbers(5, 5)) //[1, 2, 3, 4, 5]
