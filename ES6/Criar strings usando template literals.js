@@ -6,11 +6,9 @@ const result = {
   function makeList(arr) {
     // Altere apenas o código abaixo desta linha
     const failureItems = [];
-    failureItems.push('[')
     for (let i = 0; i < arr.length; i++) {
         failureItems.push(`<li class="text-warning">${arr[i]}</li>`)
     }
-    failureItems.push(']')
     // Altere apenas o código acima desta linha
   
     return failureItems;
