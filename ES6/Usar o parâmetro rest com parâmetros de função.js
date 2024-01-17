@@ -1,8 +1,8 @@
-const sum = (...arg) => {
-    const args = [...arg];
+const sum = (...args) => {
+    const arg = [...args];
     let total = 0;
-    for (let i = 0; i < args.length; i++) {
-      total += args[i];
+    for (let i = 0; i < arg.length; i++) {
+      total += arg[i];
     }
     return total;
   }
