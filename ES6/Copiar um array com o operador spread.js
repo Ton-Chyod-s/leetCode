@@ -2,7 +2,7 @@ function copyMachine(arr, num) {
     let newArr = [];
     while (num >= 1) {
       // Altere apenas o código abaixo desta linha
-      let newArr = [...arr]
+      newArr.push([...arr])
       // Altere apenas o código acima desta linha
       num--;
     }
