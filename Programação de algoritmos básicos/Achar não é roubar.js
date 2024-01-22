@@ -1,8 +1,9 @@
 function findElement(arr, func) {
-    let num = 0;
+    let num = undefined;
     for (let i = 0; i < arr.length; i++) {
-        if (func === true) {
+        if (func(arr[i])) {
             num = arr[i]
+            break
         } 
     }
     return num;
