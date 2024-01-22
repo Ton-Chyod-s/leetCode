@@ -15,14 +15,12 @@ function confirmEnding(str, target) {
             false;
         }
     } else {
-        const ehN = ultimoElementoLista[ultimoElemento.length - 1]
-        if (ehN === 'n') {
+        if (ultimoElemento === 'n') {
             return true;
         } else {
             false;
         }
     }
-
   }
   
   confirmEnding("Walking on water and developing software from a specification are easy if both are frozen", "specification");
