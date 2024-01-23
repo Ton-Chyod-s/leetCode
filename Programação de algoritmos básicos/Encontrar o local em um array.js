@@ -23,9 +23,14 @@ function getIndexToIns(arr, num) {
         } 
     }
     if (indice === 0) {
-        return 3
+        if (arr.length === 0) {
+            return 0
+        } else {
+            return 3
+        }
+        
     }
     return indice
 }
 
-console.log(getIndexToIns([2, 5, 10], 15));
+console.log(getIndexToIns([], 1));
