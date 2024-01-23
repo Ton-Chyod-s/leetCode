@@ -4,14 +4,28 @@ function getIndexToIns(arr, num) {
         const indice1 = arr[i]
         const indice2 = arr[i + 1]
         if (num > indice1 && num < indice2) {
-            indice += i + 1
+            if (num === indice2 - 1){
+                indice += i + 2
+                break
+            } else {
+                indice += i + 1
+                break
+            }
+        } else if (num === indice1) { 
+            if (i === 0 && indice1 < indice2) {
+                return 0
+            } else if (i === 0 && indice1 > indice2) {
+                return 2
+            } else {
+                indice += i
+            }
             break
-        } else if (num === indice1) {
-            indice += i
-            break
-        }
+        } 
+    }
+    if (indice === 0) {
+        return 3
     }
     return indice
 }
 
-console.log(getIndexToIns([5, 3, 20, 3], 5));
+console.log(getIndexToIns([2, 5, 10], 15));
