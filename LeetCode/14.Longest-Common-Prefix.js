@@ -7,9 +7,11 @@ lista = [];
 
 var longestCommonPrefix = function(strs) {
     for (let i = 0; i < strs.length; i++) {
-        console.log(strs[i].split(''))
-       
+        for (let j = 0; j < strs[i].length; j++) {
+            
+            
+        }
     }
-};
+}
 
-longestCommonPrefix(["flower","flow","flight"])
+console.log(longestCommonPrefix(["a"]))
