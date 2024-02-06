@@ -4,22 +4,15 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    if (nums[0] + nums[1] === target) {
-        list = [0,1];
-        return list
-    } else if (nums[1] + nums[2] === target) {
-        list = [1,2];
-        return list
-    } else if (nums[0] < 0) {
-        const tamanho = nums.length -2
-        list = [0,tamanho]
-        return list
-    } else {
-        const tamanho = nums.length - 1
-        list = [0,tamanho];
-        return list
-    }
+    let num;
+    const res = new Array()
+    for (let i = 0; i < nums.length; i++) {
+      for (let j = i + 1; j < nums.length; j++) {
+        if (nums[i] + nums[j] === target) {
+            return [i,j]
+        }
+      }
+    } 
 };
 
-
-console.log(twoSum([3,2,3,2],0))
+console.log(twoSum([3,2,4],6))
