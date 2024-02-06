@@ -16,7 +16,7 @@ const listaL2 = [];
 var addTwoNumbers = function(l1, l2) {
     const ehNumeroL1 = !isNaN(parseInt(l1.toString().replace(/,/g,'')));
     const ehNumeroL2 = !isNaN(parseInt(l2.toString().replace(/,/g,'')));
-
+    let resLista;
     if (ehNumeroL1 && ehNumeroL2) {
         for (let i = 0; i < l1.length; i++) {
             listaL1.unshift(l1[i]);
@@ -33,10 +33,9 @@ var addTwoNumbers = function(l1, l2) {
             return parseInt(str,10);
         })
 
-        return totalInt
-    }  else {
-        return
-}
+        resLista = totalInt
+    }
+    return resLista
 };
 
 console.log(addTwoNumbers([2,4,3],[5,6,4]))
