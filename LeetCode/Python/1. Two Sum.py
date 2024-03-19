@@ -1,17 +1,14 @@
 class Solution(object):
     def twoSum(self, nums, target):
-        tamanho = len(nums)
-        if tamanho > 2: 
-            soma2 = nums[1] + nums[2]
-        else:
-            soma = nums[0] + nums[1]
-            if soma == target:
-                return [0,1]
-            elif soma2 == target:
-                return [1,2]
-            else:
-                return [0,1]
-
+        for keyI, i in enumerate(nums):
+            start = 1
+            end = len(nums)
+            for keyJ, j in enumerate(nums[start:end], start):
+                if nums[keyI] + nums[keyJ] == target:
+                    return [keyI,keyJ]
+                
 if __name__ == '__main__':
     nums = Solution()
-    nums.twoSum([2,7,11,15],9)
+    #print(nums.twoSum([2,7,11,15],9))
+    print(nums.twoSum([3,2,4],6))
+    print(nums.twoSum([2,5,5,11],10))
