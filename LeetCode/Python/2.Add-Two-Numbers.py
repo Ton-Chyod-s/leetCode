@@ -16,3 +16,5 @@ class Solution(object):
 if __name__ == '__main__':
     num = Solution()
     print(num.addTwoNumbers([2,4,3],[5,6,4]))
+    print(num.addTwoNumbers([0],[0]))
+    print(num.addTwoNumbers([9,9,9,9,9,9,9],[9,9,9,9]))
