@@ -5,8 +5,6 @@
 #         self.next = next
 class Solution(object):
     def addTwoNumbers(self, l1, l2):
-        l1.reverse()
-        l2.reverse()
         listaNumL1 = ""
         listaNumL2 = ""
         for i in l1:
@@ -20,7 +18,6 @@ class Solution(object):
         res.reverse()
 
         return res
-
 
 if __name__ == '__main__':
     num = Solution()
