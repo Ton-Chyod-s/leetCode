@@ -22,7 +22,6 @@ class Solution(object):
         return res
 
 
-
 if __name__ == '__main__':
     num = Solution()
     print(num.addTwoNumbers([2,4,3],[5,6,4]))
